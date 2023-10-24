@@ -1,0 +1,32 @@
+.nav {
+    &__list {
+        list-style-type: none;
+    }
+    &__link {
+        font-size: var(--fz-16);
+        font-weight: var(--fw-500);
+        color: var(--text-color);
+        line-height: var(--lh-22);
+        position: relative;
+        transition: all .4s ease;
+        &:hover {
+            color: #fff;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            height: 3px;
+            width: 0%;
+            background-color: #fff;
+            transition: all 0.4s ease;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &:hover:before {
+            width: 100%;
+
+        }
+    }
+}

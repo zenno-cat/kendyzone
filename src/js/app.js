@@ -1,7 +1,12 @@
-import fancybox from "./modules/fancybox.js";
+// import fancybox from "./modules/fancybox.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  // const burger = document.querySelector(".burger");
+  const burger = document.querySelector(".header__burger");
+  const nav = document.querySelector(".header__navigation");
+  burger.addEventListener("click", () => {
+    burger.classList.toggle("active");
+    nav.classList.toggle("active");
+  });
   // const overlay = document.querySelector(".overlay");
   // const intro = document.querySelector(".intro");
   // const navLinks = document.querySelectorAll('.nav__link');
@@ -16,27 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // 		}
   // 	})
   // })
-  // burger.addEventListener("click", toggleBurger);
-  // function toggleBurger() {
-  // 	try {
-  // 		if (JSON.parse(burger.getAttribute("aria-expanded"))) {
-  // 			overlay.classList.add("active");
-  // 			if (intro) {
-  // 				intro.classList.add("active");
-  // 			}
-  // 			burger.classList.add("active");
-  // 			document.body.style.overflow = "hidden";
-  // 		} else {
-  // 			overlay.classList.remove("active");
-  // 			if (intro) {
-  // 				intro.classList.remove("active");
-  // 			}
-  // 			burger.classList.remove("active");
-  // 			document.body.style.overflow = "auto";
-  // 		}
-  // 	} catch {
-  // 	}
-  // }
+
   // const slider = () => {
   // 	try {
   // 		new Swiper(".mySwiper", {

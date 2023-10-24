@@ -1,0 +1,25 @@
+.contacts {
+    &__item {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 991px) {
+    .contacts {
+        &__item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            i {
+                font-size: 28px;
+            }
+            span {
+                font-size: var(--fz-16);
+                text-decoration: underline;
+                color: var(--text-color);
+            }
+            
+        }
+        
+    }
+}
