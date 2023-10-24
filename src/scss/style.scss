@@ -1,0 +1,96 @@
+@import "./fonts";
+
+:root {
+  --first-font: 'Inter', sans-serif;
+  --second-font: 'CormorantGaramond';
+  --third-font: 'Cormorant';
+  --text-color: #ffffff;
+  --bg-color: #0A0A0A;
+  --line-color: #212121;
+  --second-text-color: #B7B7B7;
+  --fz-16: 16px;
+  --fz-82: 82px;
+  --fz-69: 69px;
+  --fz-46: 46px;
+  --fz-31: 31px;
+  --fz-25: 25px;
+  --fz-13: 13px;
+  --gap-20: 20px;
+  --gap-28: 28px;
+  --gap-15: 15px;
+  --gap-32: 32px;
+  --gap-54: 54px;
+  --margin-top-12: 12px;
+  --margin-top-18: 18px;
+  --margin-top-22: 22px;
+  --margin-top-28: 28px;
+  --margin-top-38: 38px;
+  --margin-top-68: 68px;
+  --padding-15-20: 15px 20px;
+  --padding-5-12: 5px 12px;
+  --border-radius-4: 4px;
+  --border-radius-8: 8px;
+  --border-radius-18: 18px;
+  --padding-15: 15px;
+}
+
+body {
+  font-size: 16px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    word-wrap: break-word;
+  }
+  
+  img {
+    display: block;
+  }
+  
+  a {
+    text-decoration: none;
+    display: block;
+  }
+  
+  button {
+    border: none;
+    background-color: transparent;
+  }
+  
+  h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  ul, li {
+    padding: 0;
+    margin: 0;
+  }
+  
+  input::-moz-placeholder {
+    box-sizing: border-box;
+  }
+  
+  input, input::placeholder {
+    box-sizing: border-box;
+  }
+  
+
+.wrapper {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* высота веб-страницы больше или равна высоте окна браузера */
+    margin: 0;
+}
+
+.content {
+    flex: 1; /* если содержимое body меньше высоты окна, то section будет растянут до нужной величины */
+    // white-space: pre-line;
+    -ms-flex-preferred-size: auto;
+}
+
+//MY STYLES
