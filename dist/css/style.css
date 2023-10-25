@@ -957,6 +957,70 @@ input, input::placeholder {
     width: 100%;
   }
 }
+.ques {
+  padding-top: var(--padding-top-120);
+}
+.ques__title {
+  text-align: center;
+  margin: 0 auto;
+}
+.ques__wrapper {
+  margin-top: var(--margin-top-28);
+}
+.ques__item {
+  padding: 28px 0;
+  border-bottom: 1px solid var(--line-color);
+}
+.ques__item:nth-child(1) {
+  border-top: 1px solid var(--line-color);
+}
+.ques__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ques__text {
+  margin-top: 22px;
+}
+.ques__icon {
+  cursor: pointer;
+}
+.ques__icon:before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 4px;
+  background-color: var(--text-color);
+  transform: rotate(90deg) translateX(2px);
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+.ques__icon:after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 4px;
+  background-color: var(--text-color);
+  transition: all 0.3s ease;
+}
+.ques__icon.active:before {
+  transform: rotate(0deg) translateX(0px);
+  opacity: 0;
+}
+.ques__icon.active:after {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 767px) {
+  .ques__caption {
+    max-width: 270px;
+  }
+  .ques__item {
+    padding: 18px;
+  }
+}
 .title {
   font-family: var(--second-font);
   font-weight: 700;

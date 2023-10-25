@@ -31,52 +31,22 @@ document.addEventListener("DOMContentLoaded", () => {
           prevEl: ".slider__arrow-prev",
         },
         pagination: { el: ".swiper-pagination" },
-        // freeMode: true,
-        // spaceBetween: 16,
-        // breakpoints: {
-        //   320: {
-        //     slidesPerView: "auto",
-        //     spaceBetween: 12,
-        //   },
-        //   575: {
-        //     slidesPerView: 2,
-        //     spaceBetween: 12,
-        //   },
-        //   768: {
-        //     slidesPerView: "auto",
-        //     spaceBetween: 12,
-        //   },
-        //   992: {
-        //     slidesPerView: 4,
-        //     spaceBetween: 16,
-        //   },
-        // },
       });
     } catch (err) {
       console.log(err);
     }
   };
   slider();
-  // const questions = () => {
-  // 	try {
-  // 		const e = document.querySelectorAll(".ques__question");
-  // 		e.forEach((e=>{
-  // 			e.addEventListener("click", (t=>{
-  // 				const c = e.querySelector(".ques__caption")
-  // 					, a = e.querySelector(".ques__top");
-  // 				e.classList.contains("collapsed") ? (e.classList.remove("active"),
-  // 				c.classList.remove("active"),
-  // 				a.classList.remove("active")) : (e.classList.add("active"),
-  // 				c.classList.add("active"),
-  // 				a.classList.add("active"))
-  // 			}
-  // 			))
-  // 		}
-  // 		)),
-  // 		e[0].click()
-  // 	} catch {}
-  // }
-  // questions();
+
   // fancybox();
   calc();
+
+  const questions = document.querySelectorAll(".ques__top");
+
+  questions.forEach((item) => {
+    item.addEventListener("click", () => {
+      const icon = item.querySelector(".ques__icon");
+      icon.classList.toggle("active");
+    });
+  });
 });
