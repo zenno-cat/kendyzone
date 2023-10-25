@@ -1,5 +1,9 @@
 .calc {
     padding-top: var(--padding-top-120);
+    &__title {
+        text-align: center;
+        margin: 0 auto;
+    }
     &__wrapper {
         margin-top: var(--margin-top-68);
     }
@@ -65,6 +69,11 @@
     &__description {
         margin-top: var(--margin-top-12);
     }
+    &__button {
+        margin-top: var(--margin-top-38);
+        padding: 15px 58px;
+        max-width: fit-content;
+    }
 }
 
 @media (max-width: 1399px) {
@@ -125,6 +134,11 @@
         }
         &__salary {
             padding: 8px 18px;
+        }
+        &__button {
+            margin-top: 28px;
+            max-width: 100%;
+            width: 100%;
         }
     }
 }

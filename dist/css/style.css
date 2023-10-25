@@ -69,6 +69,7 @@
   --gap-15: 15px;
   --gap-32: 32px;
   --gap-47: 47px;
+  --gap-48: 48px;
   --gap-54: 54px;
   --margin-top-12: 12px;
   --margin-top-18: 18px;
@@ -639,6 +640,10 @@ input, input::placeholder {
 .calc {
   padding-top: var(--padding-top-120);
 }
+.calc__title {
+  text-align: center;
+  margin: 0 auto;
+}
 .calc__wrapper {
   margin-top: var(--margin-top-68);
 }
@@ -704,6 +709,11 @@ input, input::placeholder {
 .calc__description {
   margin-top: var(--margin-top-12);
 }
+.calc__button {
+  margin-top: var(--margin-top-38);
+  padding: 15px 58px;
+  max-width: fit-content;
+}
 
 @media (max-width: 1399px) {
   .calc__right {
@@ -752,6 +762,107 @@ input, input::placeholder {
   }
   .calc__salary {
     padding: 8px 18px;
+  }
+  .calc__button {
+    margin-top: 28px;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+.choose {
+  padding-top: var(--padding-top-120);
+}
+.choose__title {
+  text-align: center;
+  margin: 0 auto;
+}
+.choose__wrapper {
+  margin-top: var(--margin-top-68);
+  gap: var(--gap-48);
+}
+.choose__caption {
+  background-color: #000;
+  padding: 0px 48px;
+  width: 40%;
+  display: flex;
+  align-items: center;
+}
+.choose__caption span {
+  font-family: var(--second-font);
+  font-weight: 500;
+  font-size: var(--fz-46);
+  line-height: var(--lh-46);
+  color: var(--text-color);
+}
+.choose__img {
+  background-color: #000;
+  width: 60%;
+}
+.choose__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.choose__card-odd .choose__caption {
+  border-radius: 18px 0px 0px 18px;
+}
+.choose__card-odd .choose__img {
+  background-color: #000;
+  border-radius: 0px 18px 18px 0px;
+}
+.choose__card-odd .choose__img img {
+  border-radius: 18px;
+}
+.choose__card-even .choose__caption {
+  border-radius: 0px 18px 18px 0px;
+}
+.choose__card-even .choose__img {
+  background-color: #000;
+  border-radius: 18px 0px 0px 18px;
+}
+.choose__card-even .choose__img img {
+  border-radius: var(--border-radius-18);
+}
+
+@media (max-width: 1199px) {
+  .choose__img {
+    width: 50%;
+  }
+  .choose__caption {
+    width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .choose__card {
+    display: flex;
+  }
+  .choose__card-odd {
+    flex-direction: column-reverse;
+  }
+  .choose__card-odd .choose__caption {
+    border-radius: 0px 0px 18px 18px;
+  }
+  .choose__card-even {
+    flex-direction: column;
+  }
+  .choose__card-even .choose__caption {
+    border-radius: 0px 0px 18px 18px;
+  }
+  .choose__img {
+    width: 100%;
+  }
+  .choose__caption {
+    width: 100%;
+    padding: 18px;
+    justify-content: center;
+  }
+  .choose__caption span {
+    text-align: center;
+  }
+}
+@media (max-width: 575px) {
+  .choose__img {
+    min-height: 214px;
   }
 }
 .title {
@@ -812,6 +923,8 @@ input, input::placeholder {
     --lh-82: 68px;
     --fz-69: 45px;
     --lh-69: 45px;
+    --fz-46: 32px;
+    --lh-46: 32px;
   }
 }
 @media (max-width: 767px) {
@@ -836,10 +949,13 @@ input, input::placeholder {
     --lh-82: 42px;
     --fz-69: 38px;
     --lh-69: 38px;
+    --fz-46: 30px;
+    --lh-46: 30px;
     --gap-18: 12px;
     --padding-15-20: 13px 18px;
     --padding-top-120: 80px;
     --margin-top-28: 18px;
+    --gap-48: 18px;
   }
   .mt-18 {
     margin-top: 8px;

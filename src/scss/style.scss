@@ -28,6 +28,7 @@
   --gap-15: 15px;
   --gap-32: 32px;
   --gap-47: 47px;
+  --gap-48: 48px;
   --gap-54: 54px;
   --margin-top-12: 12px;
   --margin-top-18: 18px;
@@ -127,6 +128,7 @@ body {
 @import "./components/slider";
 @import "./components/steps";
 @import "./components/calc";
+@import "./components/choose";
 
 
 .title {
@@ -188,6 +190,8 @@ body {
     --lh-82: 68px;
     --fz-69: 45px;
     --lh-69: 45px;
+    --fz-46: 32px;
+    --lh-46: 32px;
   }
 }
 
@@ -214,10 +218,13 @@ body {
     --lh-82: 42px;
     --fz-69: 38px;
     --lh-69: 38px;
+    --fz-46: 30px;
+    --lh-46: 30px;
     --gap-18: 12px;
     --padding-15-20: 13px 18px;
     --padding-top-120: 80px;
     --margin-top-28: 18px;
+    --gap-48: 18px;
   }
   .mt-18 {
     margin-top: 8px;
