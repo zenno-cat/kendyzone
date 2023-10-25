@@ -1,0 +1,65 @@
+<section class="form">
+  <div class="container">
+    <div class="row form__wrapper">
+      <div
+        class="col-12 d-flex flex-column align-items-center justify-content-center"
+      >
+        <h2 class="form__title title title-h2">Начни зарабатывать сегодня</h2>
+        <p class="form__subtitle subtitle">
+          Гибкий график и удобное расположение в 5-ти минутах ходьбы от метро
+          позволит тебе решать, когда зарабатывать и как выстраивать свое время,
+          совмещая эту работу с твоими личными делами. Просто заполни анкету
+        </p>
+        <div class="form__content" id="form">
+          <form method="post" action="#">
+            <div class="form__top d-flex flex-column">
+              <input
+                class="form__input"
+                placeholder="Ваше имя"
+                type="text"
+                name="your-name"
+              />
+              <input
+                class="form__input"
+                placeholder="Телефон, телеграм или ссылка"
+                type="text"
+                name="phone"
+              />
+              <input
+                class="form__input form__input-num"
+                placeholder="Возраст"
+                type="number"
+                name="age"
+              />
+
+              <div class="form__file-wrapper">
+                <p class="form__photo">Ваша фотография</p>
+                <label class="form__file" for="photo">Выбрать файл</label>
+                <input
+                  class="d-none"
+                  id="photo"
+                  accept="audio/*,video/*,image/*"
+                  aria-invalid="false"
+                  type="file"
+                  name="photo"
+                />
+              </div>
+            </div>
+            <input
+              class="form__button form__button-white"
+              type="submit"
+              value="Отправить анкету"
+            />
+            <p class="form__policy">
+              Отправляя форму вы соглашаетесь с
+              <a href="/privacy-policy/" rel="nofollow"
+                >политикой конфиденциальности</a
+              >
+              и на обработку ваших персональных данных.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

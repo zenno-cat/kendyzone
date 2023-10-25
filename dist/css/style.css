@@ -865,6 +865,98 @@ input, input::placeholder {
     min-height: 214px;
   }
 }
+.form {
+  padding-top: var(--padding-top-120);
+}
+.form__wrapper {
+  border-radius: var(--border-radius-18);
+  background-color: #000;
+  padding: 48px 0px;
+}
+.form__title {
+  text-align: center;
+}
+.form__subtitle {
+  text-align: center;
+  margin-top: var(--margin-top-28);
+  max-width: 630px;
+}
+.form__content {
+  margin-top: var(--margin-top-38);
+  width: 590px;
+}
+.form__top {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-18) 0px;
+}
+.form__input {
+  padding: 15px 28px;
+  border-radius: var(--border-radius-4);
+  background-color: var(--line-color);
+  border: none;
+  outline: none;
+  font-size: var(--fz-16);
+  color: var(--second-text-color);
+}
+.form__input::placeholder {
+  color: var(--second-text-color);
+  font-size: var(--fz-16);
+}
+.form__file-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 28px;
+  border: 1px solid #fff;
+  border-radius: var(--border-radius-4);
+  color: #fff;
+}
+.form__photo {
+  font-size: var(--fz-16);
+}
+.form__file {
+  cursor: pointer;
+  color: var(--second-text-color);
+  font-size: var(--fz-16);
+  text-decoration: underline;
+}
+.form__button {
+  display: block;
+  padding: 15px 70px;
+  margin: 0 auto;
+  font-size: var(--fz-16);
+  font-weight: var(--fw-500);
+  line-height: var(--lh-22);
+  color: #000;
+  border-radius: var(--border-radius-4);
+  background-color: #fff;
+  border: 2px solid var(--text-color);
+  text-align: center;
+  position: relative;
+  transition: all 0.35s;
+  margin-top: var(--margin-top-28);
+}
+.form__button:hover {
+  color: #fff;
+  background-color: #000;
+}
+.form__policy {
+  font-size: var(--fz-13);
+  color: var(--second-text-color);
+  text-align: center;
+  margin-top: var(--margin-top-18);
+}
+.form__policy a {
+  display: inline-block;
+  color: var(--second-text-color);
+  text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+  .form__content {
+    width: 100%;
+  }
+}
 .title {
   font-family: var(--second-font);
   font-weight: 700;
