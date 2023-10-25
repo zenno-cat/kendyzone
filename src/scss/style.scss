@@ -131,6 +131,7 @@ body {
 @import "./components/choose";
 @import "./components/form";
 @import "./components/ques";
+@import "./components/footer";
 
 
 .title {
@@ -158,6 +159,10 @@ body {
   font-size: var(--fz-31);
   line-height: 100%;
   color: var(--text-color);
+  &-grey {
+    color: var(--second-text-color);
+  
+  }
 }
 
 .text {
