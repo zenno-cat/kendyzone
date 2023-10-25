@@ -61,6 +61,7 @@
   --lh-22: 22px;
   --lh-69: 69px;
   --lh-82: 82px;
+  --gap-18: 18px;
   --gap-20: 20px;
   --gap-28: 28px;
   --gap-15: 15px;
@@ -559,6 +560,80 @@ input, input::placeholder {
     bottom: var(--swiper-pagination-bottom, 13px) !important;
   }
 }
+.steps {
+  padding-top: var(--padding-top-120);
+}
+.steps__caption {
+  text-decoration: underline;
+}
+.steps__text {
+  max-width: 378px;
+}
+.steps__list {
+  margin: 0;
+  margin-top: var(--margin-top-28);
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-28);
+}
+.steps__list-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-18);
+}
+.steps__button {
+  margin-top: var(--margin-top-28);
+}
+.steps__img {
+  width: 100%;
+  height: 656px;
+}
+.steps__img img {
+  border-radius: var(--border-radius-18);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 991px) {
+  .steps__wrapper {
+    gap: var(--gap-28);
+  }
+  .steps__text {
+    max-width: 100%;
+  }
+  .steps__img {
+    width: 100%;
+    height: 500px;
+  }
+  .steps__img img {
+    object-position: top -100px left 0;
+  }
+}
+@media (max-width: 767px) {
+  .steps__img {
+    height: 350px;
+  }
+  .steps__img img {
+    object-position: top -80px left 0;
+  }
+}
+@media (max-width: 575px) {
+  .steps__list {
+    margin-top: 18px;
+  }
+  .steps__img {
+    height: 250px;
+  }
+  .steps__img img {
+    object-position: top -60px left 0;
+  }
+  .steps__button {
+    margin-top: 18px;
+  }
+}
 .title {
   font-family: var(--second-font);
   font-weight: 700;
@@ -589,6 +664,9 @@ input, input::placeholder {
 .text {
   color: var(--text-color);
   line-height: var(--lh-22);
+}
+.text-grey {
+  color: var(--second-text-color);
 }
 
 .divider {
@@ -633,8 +711,10 @@ input, input::placeholder {
     --lh-82: 42px;
     --fz-69: 38px;
     --lh-69: 38px;
+    --gap-18: 12px;
     --padding-15-20: 13px 18px;
     --padding-top-120: 80px;
+    --margin-top-28: 18px;
   }
   .mt-18 {
     margin-top: 8px;

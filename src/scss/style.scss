@@ -20,6 +20,7 @@
   --lh-22: 22px;
   --lh-69: 69px;
   --lh-82: 82px;
+  --gap-18: 18px;
   --gap-20: 20px;
   --gap-28: 28px;
   --gap-15: 15px;
@@ -122,6 +123,7 @@ body {
 @import "./components/advantages";
 @import "./components/location";
 @import "./components/slider";
+@import "./components/steps";
 
 
 .title {
@@ -154,6 +156,9 @@ body {
 .text {
   color: var(--text-color);
   line-height: var(--lh-22);
+  &-grey {
+    color: var(--second-text-color);
+  }
 }
 
 .divider {
@@ -201,8 +206,10 @@ body {
     --lh-82: 42px;
     --fz-69: 38px;
     --lh-69: 38px;
+    --gap-18: 12px;
     --padding-15-20: 13px 18px;
     --padding-top-120: 80px;
+    --margin-top-28: 18px;
   }
   .mt-18 {
     margin-top: 8px;
