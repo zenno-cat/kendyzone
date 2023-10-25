@@ -9,13 +9,12 @@
     background-color: transparent;
     border: 2px solid var(--text-color);
     text-align: center;
-
+    max-width: 285px;
     position: relative;
     transition: all .35s;
     span {
         position: relative;
         z-index: 2;
-
     }
     &:after {
         position: absolute;
@@ -33,5 +32,27 @@
     }
     &:hover:after {
         width: 100%;
+    }
+
+    &-white {
+        color: #000;
+        &:after {
+            background-color: #fff;
+            width: 100%;
+        }
+        &:hover {
+            color: #fff;
+        }
+        &:hover:after {
+            width: 0%;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .button {
+        &-white {
+            max-width: 100%;
+        }
     }
 }

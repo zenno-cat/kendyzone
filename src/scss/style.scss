@@ -17,6 +17,7 @@
   --fz-13: 13px;
   --fw-500: 500;
   --lh-22: 22px;
+  --lh-82: 82px;
   --gap-20: 20px;
   --gap-28: 28px;
   --gap-15: 15px;
@@ -27,6 +28,7 @@
   --margin-top-22: 22px;
   --margin-top-28: 28px;
   --margin-top-38: 38px;
+  --margin-top-58: 58px;
   --margin-top-68: 68px;
   --padding-15-20: 15px 20px;
   --padding-5-12: 5px 12px;
@@ -111,10 +113,57 @@ body {
 @import "./components/_contacts";
 @import "./components/_button";
 @import "./components/_nav";
+@import "./components/intro";
+
+
+.title {
+  font-family: var(--second-font);
+  font-weight: 700;
+  font-size: var(--fz-82);
+  line-height: var(--lh-82);
+  color: var(--text-color);
+}
+
+.subtitle {
+  font-family: var(--first-font);
+  font-size: var(--fz-16);
+  font-weight: 400;
+  line-height: var(--lh-22);
+  color: var(--text-color);
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--line-color);
+}
 
 @media (max-width: 1199px) {
   :root {
     --gap-28: 14px;
     --gap-32: 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  :root {
+    --fz-82: 68px;
+    --lh-82: 68px;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --fz-82: 56px;
+    --lh-82: 56px;
+    --margin-top-58: 18px;
+  }
+}
+
+@media (max-width: 575px) { 
+  :root {
+    --fz-82: 42px;
+    --lh-82: 42px;
+    --padding-15-20: 13px 18px;
   }
 }

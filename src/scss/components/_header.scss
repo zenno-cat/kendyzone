@@ -1,12 +1,14 @@
 .header {
     padding-top: 38px;
+    position: absolute;
+    width: 100%;
     .container {
         position: relative;
     }
     &__logo {
         width: 148px;
         height: 30px;
-        z-index: 1;
+        z-index: 2;
     }
     &__list {
         display: flex;
@@ -33,24 +35,28 @@
         &__list {
             flex-direction: column;
             align-items: flex-start;
+            z-index: 2;
         }
         &__connect {
             flex-direction: column;
             gap: 18px;
         }
         &__contacts {
-            z-index: 1;
+            z-index: 2;
             flex-direction: column;
             align-items: flex-start;
             gap: 12px;
         }
         &__caption {
-            z-index: 1;
+            z-index: 2;
             font-size: 26px;
             line-height: 26px;
             color: var(--second-text-color);
             font-family: var(--second-font);
             font-weight: 500;
+        }
+        &__button {
+            z-index: 2;
         }
         &__burger {
             position: absolute;
@@ -61,6 +67,7 @@
             display: flex;
             flex-direction: column;
             gap: 5px;
+            z-index: 2;
             span {
                 width: 17px;
                 height: 2px;
@@ -96,6 +103,17 @@
                 top: -20%;
                 left: -20%;
                 background-color: #000;
+                z-index: 1;
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                width: 150%;
+                height: 100vh;
+                top: -20%;
+                left: -20%;
+                background-color: rgba(0,0,0,.5);
+                z-index: 1;
             }
             &.active {
                 left: 0%;

@@ -58,6 +58,7 @@
   --fz-13: 13px;
   --fw-500: 500;
   --lh-22: 22px;
+  --lh-82: 82px;
   --gap-20: 20px;
   --gap-28: 28px;
   --gap-15: 15px;
@@ -68,6 +69,7 @@
   --margin-top-22: 22px;
   --margin-top-28: 28px;
   --margin-top-38: 38px;
+  --margin-top-58: 58px;
   --margin-top-68: 68px;
   --padding-15-20: 15px 20px;
   --padding-5-12: 5px 12px;
@@ -145,6 +147,8 @@ input, input::placeholder {
 
 .header {
   padding-top: 38px;
+  position: absolute;
+  width: 100%;
 }
 .header .container {
   position: relative;
@@ -152,7 +156,7 @@ input, input::placeholder {
 .header__logo {
   width: 148px;
   height: 30px;
-  z-index: 1;
+  z-index: 2;
 }
 .header__list {
   display: flex;
@@ -177,24 +181,28 @@ input, input::placeholder {
   .header__list {
     flex-direction: column;
     align-items: flex-start;
+    z-index: 2;
   }
   .header__connect {
     flex-direction: column;
     gap: 18px;
   }
   .header__contacts {
-    z-index: 1;
+    z-index: 2;
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
   }
   .header__caption {
-    z-index: 1;
+    z-index: 2;
     font-size: 26px;
     line-height: 26px;
     color: var(--second-text-color);
     font-family: var(--second-font);
     font-weight: 500;
+  }
+  .header__button {
+    z-index: 2;
   }
   .header__burger {
     position: absolute;
@@ -205,6 +213,7 @@ input, input::placeholder {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    z-index: 2;
   }
   .header__burger span {
     width: 17px;
@@ -239,6 +248,17 @@ input, input::placeholder {
     top: -20%;
     left: -20%;
     background-color: #000;
+    z-index: 1;
+  }
+  .header__navigation:after {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 100vh;
+    top: -20%;
+    left: -20%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
   }
   .header__navigation.active {
     left: 0%;
@@ -274,6 +294,7 @@ input, input::placeholder {
   background-color: transparent;
   border: 2px solid var(--text-color);
   text-align: center;
+  max-width: 285px;
   position: relative;
   transition: all 0.35s;
 }
@@ -297,7 +318,25 @@ input, input::placeholder {
 .button:hover:after {
   width: 100%;
 }
+.button-white {
+  color: #000;
+}
+.button-white:after {
+  background-color: #fff;
+  width: 100%;
+}
+.button-white:hover {
+  color: #fff;
+}
+.button-white:hover:after {
+  width: 0%;
+}
 
+@media (max-width: 575px) {
+  .button-white {
+    max-width: 100%;
+  }
+}
 .nav__list {
   list-style-type: none;
 }
@@ -328,9 +367,88 @@ input, input::placeholder {
   width: 100%;
 }
 
+.intro {
+  height: 100vh;
+  background-image: url("../../img/intro-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.intro__wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 100px;
+}
+.intro__title {
+  max-width: 895px;
+}
+.intro__subtitle {
+  margin-top: var(--margin-top-28);
+  max-width: 521px;
+}
+.intro__button {
+  margin-top: var(--margin-top-38);
+}
+.intro__divider {
+  margin-top: var(--margin-top-58);
+}
+
+@media (max-width: 767px) {
+  .intro {
+    height: 700px;
+  }
+  .intro__wrapper {
+    height: 700px;
+    padding-bottom: 28px;
+  }
+}
+.title {
+  font-family: var(--second-font);
+  font-weight: 700;
+  font-size: var(--fz-82);
+  line-height: var(--lh-82);
+  color: var(--text-color);
+}
+
+.subtitle {
+  font-family: var(--first-font);
+  font-size: var(--fz-16);
+  font-weight: 400;
+  line-height: var(--lh-22);
+  color: var(--text-color);
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--line-color);
+}
+
 @media (max-width: 1199px) {
   :root {
     --gap-28: 14px;
     --gap-32: 20px;
+  }
+}
+@media (max-width: 991px) {
+  :root {
+    --fz-82: 68px;
+    --lh-82: 68px;
+  }
+}
+@media (max-width: 767px) {
+  :root {
+    --fz-82: 56px;
+    --lh-82: 56px;
+    --margin-top-58: 18px;
+  }
+}
+@media (max-width: 575px) {
+  :root {
+    --fz-82: 42px;
+    --lh-82: 42px;
+    --padding-15-20: 13px 18px;
   }
 }
