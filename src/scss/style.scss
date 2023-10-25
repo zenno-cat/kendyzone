@@ -17,6 +17,7 @@
   --fz-13: 13px;
   --fw-500: 500;
   --lh-22: 22px;
+  --lh-69: 69px;
   --lh-82: 82px;
   --gap-20: 20px;
   --gap-28: 28px;
@@ -37,6 +38,7 @@
   --border-radius-8: 8px;
   --border-radius-18: 18px;
   --padding-15: 15px;
+  --padding-top-120: 120px;
 }
 
 body {
@@ -114,6 +116,7 @@ body {
 @import "./components/_button";
 @import "./components/_nav";
 @import "./components/intro";
+@import "./components/team";
 
 
 .title {
@@ -122,6 +125,10 @@ body {
   font-size: var(--fz-82);
   line-height: var(--lh-82);
   color: var(--text-color);
+  &-h2 {
+    font-size: var(--fz-69);
+    line-height: var(--lh-69);
+  }
 }
 
 .subtitle {
@@ -138,6 +145,10 @@ body {
   background-color: var(--line-color);
 }
 
+.mt-18 {
+  margin-top: var(--margin-top-18)
+}
+
 @media (max-width: 1199px) {
   :root {
     --gap-28: 14px;
@@ -149,6 +160,8 @@ body {
   :root {
     --fz-82: 68px;
     --lh-82: 68px;
+    --fz-69: 45px;
+    --lh-69: 45px;
   }
 }
 
@@ -156,6 +169,8 @@ body {
   :root {
     --fz-82: 56px;
     --lh-82: 56px;
+    --fz-69: 42px;
+    --lh-69: 42px;
     --margin-top-58: 18px;
   }
 }
@@ -164,6 +179,12 @@ body {
   :root {
     --fz-82: 42px;
     --lh-82: 42px;
+    --fz-69: 38px;
+    --lh-69: 38px;
     --padding-15-20: 13px 18px;
+    --padding-top-120: 80px;
+  }
+  .mt-18 {
+    margin-top: 8px;
   }
 }

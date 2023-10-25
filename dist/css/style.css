@@ -58,6 +58,7 @@
   --fz-13: 13px;
   --fw-500: 500;
   --lh-22: 22px;
+  --lh-69: 69px;
   --lh-82: 82px;
   --gap-20: 20px;
   --gap-28: 28px;
@@ -78,6 +79,7 @@
   --border-radius-8: 8px;
   --border-radius-18: 18px;
   --padding-15: 15px;
+  --padding-top-120: 120px;
 }
 
 body {
@@ -372,7 +374,7 @@ input, input::placeholder {
   background-image: url("../../img/intro-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
+  background-position: bottom center;
 }
 .intro__wrapper {
   height: 100vh;
@@ -404,12 +406,47 @@ input, input::placeholder {
     padding-bottom: 28px;
   }
 }
+.team {
+  padding-top: var(--padding-top-120);
+}
+.team__img {
+  max-width: 590px;
+}
+.team__img img {
+  border-radius: var(--border-radius-18);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.team__subtitle {
+  margin-top: var(--margin-top-28);
+  max-width: 556px;
+}
+
+@media (max-width: 767px) {
+  .team__wrapper {
+    gap: var(--gap-28);
+  }
+  .team__img {
+    max-width: 100%;
+    height: 360px;
+  }
+}
+@media (max-width: 575px) {
+  .team__img {
+    height: 214px;
+  }
+}
 .title {
   font-family: var(--second-font);
   font-weight: 700;
   font-size: var(--fz-82);
   line-height: var(--lh-82);
   color: var(--text-color);
+}
+.title-h2 {
+  font-size: var(--fz-69);
+  line-height: var(--lh-69);
 }
 
 .subtitle {
@@ -426,6 +463,10 @@ input, input::placeholder {
   background-color: var(--line-color);
 }
 
+.mt-18 {
+  margin-top: var(--margin-top-18);
+}
+
 @media (max-width: 1199px) {
   :root {
     --gap-28: 14px;
@@ -436,12 +477,16 @@ input, input::placeholder {
   :root {
     --fz-82: 68px;
     --lh-82: 68px;
+    --fz-69: 45px;
+    --lh-69: 45px;
   }
 }
 @media (max-width: 767px) {
   :root {
     --fz-82: 56px;
     --lh-82: 56px;
+    --fz-69: 42px;
+    --lh-69: 42px;
     --margin-top-58: 18px;
   }
 }
@@ -449,6 +494,12 @@ input, input::placeholder {
   :root {
     --fz-82: 42px;
     --lh-82: 42px;
+    --fz-69: 38px;
+    --lh-69: 38px;
     --padding-15-20: 13px 18px;
+    --padding-top-120: 80px;
+  }
+  .mt-18 {
+    margin-top: 8px;
   }
 }
