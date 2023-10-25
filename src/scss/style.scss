@@ -11,6 +11,7 @@
   --fz-16: 16px;
   --fz-82: 82px;
   --fz-69: 69px;
+  --fz-52: 52px;
   --fz-46: 46px;
   --fz-31: 31px;
   --fz-25: 25px;
@@ -23,6 +24,7 @@
   --gap-28: 28px;
   --gap-15: 15px;
   --gap-32: 32px;
+  --gap-47: 47px;
   --gap-54: 54px;
   --margin-top-12: 12px;
   --margin-top-18: 18px;
@@ -117,6 +119,9 @@ body {
 @import "./components/_nav";
 @import "./components/intro";
 @import "./components/team";
+@import "./components/advantages";
+@import "./components/location";
+@import "./components/slider";
 
 
 .title {
@@ -137,6 +142,18 @@ body {
   font-weight: 400;
   line-height: var(--lh-22);
   color: var(--text-color);
+}
+
+.caption {
+  font-family: var(--second-font);
+  font-size: var(--fz-31);
+  line-height: 100%;
+  color: var(--text-color);
+}
+
+.text {
+  color: var(--text-color);
+  line-height: var(--lh-22);
 }
 
 .divider {
@@ -172,6 +189,9 @@ body {
     --fz-69: 42px;
     --lh-69: 42px;
     --margin-top-58: 18px;
+    --margin-top-68: 28px;
+    --margin-top-22: 18px;
+    --gap-47: 28px;
   }
 }
 

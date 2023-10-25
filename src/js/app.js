@@ -22,41 +22,40 @@ document.addEventListener("DOMContentLoaded", () => {
   // 	})
   // })
 
-  // const slider = () => {
-  // 	try {
-  // 		new Swiper(".mySwiper", {
-  // 			slidesPerView: 'auto',
-  // 			freeMode: true,
-  // 			spaceBetween: 16,
-  // 			breakpoints: {
-  // 			  320: {
-  // 				slidesPerView: 'auto',
-  // 				spaceBetween: 12,
-  // 			  },
-  // 			  575: {
-  // 				slidesPerView: 2,
-  // 				spaceBetween: 12,
-  // 			  },
-  // 			  768: {
-  // 				slidesPerView: 'auto',
-  // 				spaceBetween: 12,
-  // 			  },
-  // 			  992: {
-  // 				slidesPerView: 4,
-  // 				spaceBetween: 16,
-  // 			  }
-  // 			},
-  // 		});
-  // 		new Swiper(".atmo__slider", {
-  // 			navigation: {
-  // 				nextEl: ".atmo__arrow-next",
-  // 				prevEl: ".atmo__arrow-prev",
-  // 			  },
-  // 		});
-  // 	} catch {
-  // 	}
-  // }
-  // slider();
+  const slider = () => {
+    try {
+      new Swiper(".location__slider", {
+        navigation: {
+          nextEl: ".slider__arrow-next",
+          prevEl: ".slider__arrow-prev",
+        },
+        pagination: { el: ".swiper-pagination" },
+        // freeMode: true,
+        // spaceBetween: 16,
+        // breakpoints: {
+        //   320: {
+        //     slidesPerView: "auto",
+        //     spaceBetween: 12,
+        //   },
+        //   575: {
+        //     slidesPerView: 2,
+        //     spaceBetween: 12,
+        //   },
+        //   768: {
+        //     slidesPerView: "auto",
+        //     spaceBetween: 12,
+        //   },
+        //   992: {
+        //     slidesPerView: 4,
+        //     spaceBetween: 16,
+        //   },
+        // },
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  slider();
   // const questions = () => {
   // 	try {
   // 		const e = document.querySelectorAll(".ques__question");
