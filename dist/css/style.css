@@ -59,6 +59,8 @@
   --fz-13: 13px;
   --fw-500: 500;
   --lh-22: 22px;
+  --lh-31: 31px;
+  --lh-46: 46px;
   --lh-69: 69px;
   --lh-82: 82px;
   --gap-18: 18px;
@@ -634,6 +636,124 @@ input, input::placeholder {
     margin-top: 18px;
   }
 }
+.calc {
+  padding-top: var(--padding-top-120);
+}
+.calc__wrapper {
+  margin-top: var(--margin-top-68);
+}
+.calc__left {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-28) 0;
+  background-color: var(--line-color);
+  border-radius: var(--border-radius-18);
+  padding: 48px 38px;
+  height: 100%;
+  width: 100%;
+}
+.calc__right {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--border-radius-18);
+  background: #000;
+  padding: 54px 100px;
+  height: 100%;
+  width: 100%;
+}
+.calc__select {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-18) 0px;
+}
+.calc__select-wrap {
+  display: flex;
+  gap: 0px 10px;
+}
+.calc__option {
+  padding: 2px 28px;
+  border-radius: var(--border-radius-4);
+  border: 1px solid var(--second-text-color);
+  transition: all 0.3s ease;
+  color: var(--second-text-color);
+}
+.calc__option:hover {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #fff;
+}
+.calc__option.active {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #fff;
+}
+.calc__salary {
+  margin-top: var(--margin-top-12);
+  padding: 18px 23px;
+  border-radius: 10px;
+  background-color: var(--line-color);
+  width: fit-content;
+}
+.calc__salary span {
+  font-family: var(--first-font);
+  font-weight: 600;
+  font-size: var(--fz-46);
+  line-height: var(--lh-46);
+  color: #fff;
+}
+.calc__description {
+  margin-top: var(--margin-top-12);
+}
+
+@media (max-width: 1399px) {
+  .calc__right {
+    padding: 43px 75px;
+  }
+}
+@media (max-width: 1199px) {
+  .calc__right {
+    padding: 43px 75px;
+  }
+}
+@media (max-width: 991px) {
+  .calc__wrapper {
+    gap: 18px;
+  }
+}
+@media (max-width: 767px) {
+  .calc {
+    padding-top: 80px;
+  }
+  .calc__wrapper {
+    margin-top: 28px;
+  }
+}
+@media (max-width: 575px) {
+  .calc__title {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .calc__left {
+    padding: 22px 42px;
+    gap: 26px 0px;
+  }
+  .calc__right {
+    padding: 22px 42px;
+  }
+  .calc__select {
+    gap: 18px 0px;
+  }
+  .calc__caption.text__caption {
+    font-size: 22px;
+    line-height: 120%;
+  }
+  .calc__select-wrap {
+    gap: 0px 11px;
+  }
+  .calc__salary {
+    padding: 8px 18px;
+  }
+}
 .title {
   font-family: var(--second-font);
   font-weight: 700;
@@ -663,6 +783,7 @@ input, input::placeholder {
 
 .text {
   color: var(--text-color);
+  font-size: var(--fz-16);
   line-height: var(--lh-22);
 }
 .text-grey {
@@ -699,6 +820,10 @@ input, input::placeholder {
     --lh-82: 56px;
     --fz-69: 42px;
     --lh-69: 42px;
+    --fz-31: 22px;
+    --lh-31: 22px;
+    --fz-46: 38px;
+    --lh-46: 38px;
     --margin-top-58: 18px;
     --margin-top-68: 28px;
     --margin-top-22: 18px;
