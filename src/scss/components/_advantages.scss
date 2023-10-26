@@ -16,7 +16,7 @@
             justify-content: center;
             background-color: var(--line-color);
             border-radius: var(--border-radius-4);
-            i {
+            span {
                 font-size: var(--fz-52);
             }
         }
@@ -35,7 +35,7 @@
         &__item {
             &-icon {
                 margin: 0 auto;
-                i {
+                span {
                     font-size: 40px;
                 }
             }

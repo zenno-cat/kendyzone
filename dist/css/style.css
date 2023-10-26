@@ -471,7 +471,7 @@ input, input::placeholder {
   background-color: var(--line-color);
   border-radius: var(--border-radius-4);
 }
-.advantages__item-icon i {
+.advantages__item-icon span {
   font-size: var(--fz-52);
 }
 .advantages__item-caption {
@@ -486,7 +486,7 @@ input, input::placeholder {
   .advantages__item-icon {
     margin: 0 auto;
   }
-  .advantages__item-icon i {
+  .advantages__item-icon span {
     font-size: 40px;
   }
   .advantages__item-caption {
@@ -1086,10 +1086,11 @@ input, input::placeholder {
   align-items: center;
   gap: 0px 12px;
 }
-.footer__contacts-item i {
+.footer__contacts-item span:nth-child(1) {
   font-size: 28px;
+  text-decoration: none;
 }
-.footer__contacts-item span {
+.footer__contacts-item span:nth-child(2) {
   font-size: var(--fz-16);
   text-decoration: underline;
   color: var(--text-color);

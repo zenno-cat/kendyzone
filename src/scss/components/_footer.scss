@@ -33,10 +33,11 @@
         display: flex;
         align-items: center;
         gap: 0px 12px;
-        i {
+        span:nth-child(1) {
             font-size: 28px;
+            text-decoration: none;
         }
-        span {
+        span:nth-child(2) {
             font-size: var(--fz-16);
             text-decoration: underline;
             color: var(--text-color);
