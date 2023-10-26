@@ -1,4 +1,4 @@
-export default function calc() {
+export default function calculator() {
   try {
     const daysWrap = document.querySelector("[data-id='days']"),
       hoursWrap = document.querySelector("[data-id='hours']"),
@@ -58,7 +58,7 @@ export default function calc() {
       result = result.toLocaleString("ru-RU");
       summWrap.textContent = result + " ₽";
     }
-  } catch {}
+  } catch (err) {
+    console.log(err);
+  }
 }
-
-calc();
