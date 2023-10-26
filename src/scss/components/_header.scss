@@ -2,6 +2,10 @@
     padding-top: 38px;
     position: absolute;
     width: 100%;
+    &.active {
+        overflow: hidden;
+        height: 100vh;
+    }
     .container {
         position: relative;
     }

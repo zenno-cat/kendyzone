@@ -1,31 +1,35 @@
-// import fancybox from "./modules/fancybox.js";
+import fancybox from "./modules/fancybox.js";
 import calc from "./modules/calc.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const burger = document.querySelector(".header__burger");
   const nav = document.querySelector(".header__navigation");
+  const header = document.querySelector(".header");
+  const body = document.body;
+
   burger.addEventListener("click", () => {
+    header.classList.toggle("active");
+    body.classList.toggle("active");
     burger.classList.toggle("active");
     nav.classList.toggle("active");
   });
-  // const overlay = document.querySelector(".overlay");
-  // const intro = document.querySelector(".intro");
-  // const navLinks = document.querySelectorAll('.nav__link');
-  // navLinks.forEach(lnk => {
-  // 	lnk.addEventListener('click', () => {
-  // 		try {
-  // 			if (overlay.classList.contains('active')) {
-  // 				burger.click();
-  // 			}
-  // 		} catch(err) {
-  // 			console.log(err.message);
-  // 		}
-  // 	})
-  // })
+
+  const links = document.querySelectorAll(".header__link");
+
+  links.forEach((link) => {
+    link.addEventListener("click", () => {
+      header.classList.remove("active");
+      body.classList.remove("active");
+      burger.classList.remove("active");
+      nav.classList.remove("active");
+    });
+  });
 
   const slider = () => {
     try {
       new Swiper(".location__slider", {
+        autoplay: true,
+        loop: true,
         navigation: {
           nextEl: ".slider__arrow-next",
           prevEl: ".slider__arrow-prev",
@@ -36,9 +40,10 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log(err);
     }
   };
+
   slider();
 
-  // fancybox();
+  fancybox();
   calc();
 
   const questions = document.querySelectorAll(".ques__top");

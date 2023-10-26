@@ -51,6 +51,10 @@
         color: var(--second-text-color);
         font-size: var(--fz-16);
         text-decoration: underline;
+        transition: all .3s ease;
+        &:hover {
+            color: var(--text-color);
+        }
     }
     &__button {
         display: block;
@@ -81,6 +85,10 @@
             display: inline-block;
             color: var(--second-text-color);
             text-decoration: underline;
+            transition: all .3s ease;
+            &:hover {
+                color: var(--text-color);
+            }
         }
     }
 }

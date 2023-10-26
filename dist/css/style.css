@@ -93,6 +93,9 @@ body {
   background-color: var(--bg-color);
   font-family: var(--first-font);
 }
+body.active {
+  overflow: hidden;
+}
 
 * {
   font-family: var(--first-font);
@@ -157,6 +160,10 @@ input, input::placeholder {
   padding-top: 38px;
   position: absolute;
   width: 100%;
+}
+.header.active {
+  overflow: hidden;
+  height: 100vh;
 }
 .header .container {
   position: relative;
@@ -328,16 +335,17 @@ input, input::placeholder {
 }
 .button-white {
   color: #000;
+  background-color: #fff;
 }
 .button-white:after {
-  background-color: #fff;
-  width: 100%;
+  background-color: #000;
+  width: 0%;
 }
 .button-white:hover {
   color: #fff;
 }
 .button-white:hover:after {
-  width: 0%;
+  width: 100%;
 }
 
 @media (max-width: 575px) {
@@ -504,7 +512,11 @@ input, input::placeholder {
 .location__slider {
   margin-top: var(--margin-top-38);
 }
+.location__slider-item {
+  background-color: #000;
+}
 .location__slider-item img {
+  background-color: #000;
   border-radius: var(--border-radius-18);
   width: 100%;
   height: 100%;
@@ -527,6 +539,13 @@ input, input::placeholder {
   top: 50%;
   transform: translateY(-50%);
   z-index: 2;
+  transition: all 0.3s ease;
+}
+.slider__arrow:hover {
+  background-color: #fff;
+}
+.slider__arrow:hover i {
+  color: #000 !important;
 }
 .slider__arrow-prev {
   left: 18px;
@@ -919,6 +938,10 @@ input, input::placeholder {
   color: var(--second-text-color);
   font-size: var(--fz-16);
   text-decoration: underline;
+  transition: all 0.3s ease;
+}
+.form__file:hover {
+  color: var(--text-color);
 }
 .form__button {
   display: block;
@@ -950,6 +973,10 @@ input, input::placeholder {
   display: inline-block;
   color: var(--second-text-color);
   text-decoration: underline;
+  transition: all 0.3s ease;
+}
+.form__policy a:hover {
+  color: var(--text-color);
 }
 
 @media (max-width: 767px) {
