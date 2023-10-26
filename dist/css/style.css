@@ -86,6 +86,7 @@
   --border-radius-18: 18px;
   --padding-15: 15px;
   --padding-top-120: 120px;
+  --padding-top-150: 150px;
 }
 
 body {
@@ -1139,6 +1140,27 @@ input, input::placeholder {
     margin-top: 28px;
   }
 }
+.main {
+  padding-top: var(--padding-top-150);
+  height: 100%;
+}
+.main__wrapper {
+  height: 500px;
+}
+.main__inpage {
+  gap: var(--gap-28);
+}
+.main__title {
+  text-align: center;
+}
+.main__subtitle {
+  text-align: center;
+}
+.main__icon {
+  font-size: 100px;
+  color: #fff;
+}
+
 .title {
   font-family: var(--second-font);
   font-weight: 700;

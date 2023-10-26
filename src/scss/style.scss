@@ -45,6 +45,7 @@
   --border-radius-18: 18px;
   --padding-15: 15px;
   --padding-top-120: 120px;
+  --padding-top-150: 150px;
 }
 
 body {
@@ -135,7 +136,7 @@ body {
 @import "./components/form";
 @import "./components/ques";
 @import "./components/footer";
-
+@import "./components/main";
 
 .title {
   font-family: var(--second-font);
